@@ -128,8 +128,7 @@ def graph(df,nome_pais,method='unbiased',discrete=False,boot=None):
 
         plt.legend(handles=[normal,uniform,exp_dist,logistic,beta[0],lnormal[0],gama[0]], 
                title='Theoretical distributions',loc='upper right',labelspacing=1.4,frameon=False)
-    
-        plt.show()
+   
 
     #If discrete = True
     else:
@@ -191,8 +190,3 @@ def graph(df,nome_pais,method='unbiased',discrete=False,boot=None):
     
         plt.legend(handles=[normal,negbin[0],poisson[0]],title='Theoretical distributions',loc='upper right',
                    labelspacing=1.4,frameon=False)
-    
-        plt.show()
-
-
-	
