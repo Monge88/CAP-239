@@ -83,7 +83,7 @@ def graph(df,nome_pais,method='unbiased',discrete=False,boot=None):
         s2_lnorm = (es2_lnorm+2)**2*(es2_lnorm-1)
         y_lnorm = kurtmax-(es2_lnorm**4+2*es2_lnorm**3+3*es2_lnorm**2-3)
 
-        plt.figure(figsize=(12,6))
+        plt.figure(figsize=(10,6))
 
         #observations
         obs = plt.scatter(skewdata**2,kurtmax-kurtdata,s=200, c='blue', 
@@ -153,7 +153,7 @@ def graph(df,nome_pais,method='unbiased',discrete=False,boot=None):
         s2_poisson = 1/lambda_
         y_poisson = kurtmax-(3+1/lambda_)
     
-        plt.figure(figsize=(12,6))          
+        plt.figure(figsize=(10,6))          
     
         #observations
         obs = plt.scatter(skewdata**2,kurtmax-kurtdata,s=200, c='blue', 
