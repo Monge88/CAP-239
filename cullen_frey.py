@@ -7,7 +7,7 @@ np.seterr(under='ignore')
 np.seterr(over='ignore')
 
 
-def graph(df,nome_pais,method='unbiased',discrete=False,boot=None): 
+def graph(df,method='unbiased',discrete=False,boot=None): 
 
     if len(np.shape(df)) > 1: 
         raise TypeError('Samples must a list with N x 1 dimensions')
@@ -120,7 +120,6 @@ def graph(df,nome_pais,method='unbiased',discrete=False,boot=None):
         #Adding the labels
         plt.xlabel('square of skewness', fontsize=13)
         plt.ylabel('kurtosis', fontsize=13)
-        plt.title('Cullen and Frey graph - '+nome_pais, fontsize=15) 
         
         #Adding the legends
         legenda2 = plt.legend(handles=[obs,bootstrap],loc='upper center', labelspacing=1, frameon=False)
@@ -181,8 +180,7 @@ def graph(df,nome_pais,method='unbiased',discrete=False,boot=None):
     
         #adding the labels
         plt.xlabel('square of skewness', fontsize=13)
-        plt.ylabel('kurtosis', fontsize=13)
-        plt.title('Cullen and Frey graph - '+nome_pais, fontsize=15) 
+        plt.ylabel('kurtosis', fontsize=13) 
     
         #adding the legends
         legenda1 = plt.legend(handles=[obs,bootstrap],loc='upper center', labelspacing=1, frameon=False)
